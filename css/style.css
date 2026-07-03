@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Permanent Marker', 'Rubik Glitch', cursive;
+    background: linear-gradient(45deg, #111, #222, #050505);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.sidebar-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff0000, #ff7700, #ff00ff, #00ffff, #ffff00);
+    padding: 30px 20px;
+    transition: left 0.4s ease-in-out;
+    z-index: 999;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 20px;
+}
+
+.sidebar-links a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px #fff;
+}
+
+.sidebar-links a:hover {
+    background: #000;
+    color: #fff;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ffff00;
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 30px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border: 2px solid #fff;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.navbar-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #ffff00, #ff00ff, #00ffff, #ff0000);
+    padding: 10px 20px;
+    border-radius: 12px;
+    z-index: 900;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 3px solid #000;
+    object-fit: cover;
+    background-color: #333;
+}
+
+.nav-toxic-text {
+    color: #000;
+    font-size: 16px;
+    text-shadow: 2px 2px #fff;
+}
+
+.main-content-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #00ffff, #ff00ff, #ffff00);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.4);
+    max-width: 350px;
+    width: 100%;
+    border: 5px solid #000;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #000;
+    margin-bottom: 15px;
+    background-color: #444;
+}
+
+.profile-name {
+    font-size: 28px;
+    color: #000;
+    text-shadow: 2px 2px #fff;
+    margin-bottom: 10px;
+}
+
+.profile-title {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px #fff;
+}
+
+.profile-age {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px #fff;
+}
+
+.intro-section {
+    background: rgba(0, 0, 0, 0.85);
+    border: 3px dashed #ff00ff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.intro-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px #ff0000;
+    text-align: justify;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #ff0000, #ffff00, #00ffff);
+    color: #000;
+    text-shadow: 1px 1px #fff;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+    .sidebar {
+        left: 0;
+        height: 100vh;
+        position: fixed;
+    }
+    .main-content-wrapper {
+        padding-left: 300px;
+        padding-top: 40px;
+    }
+    .navbar {
+        position: fixed;
+    }
+}
